@@ -14,8 +14,7 @@ public class loginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String txtUserID = request.getParameter("txtUserID");
         String txtUserPwd = request.getParameter("txtUserPwd");
-
-
+        System.out.println("git test");
         boolean result=http.login(txtUserID, txtUserPwd);
         if(result)
             response.getWriter().println("success");

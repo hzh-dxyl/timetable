@@ -236,55 +236,7 @@ public class http {
 
                 }
             }
-/*
-            Elements items1 = document1.select(".DG").get(0).select(".DGItemStyle");
-            Elements items2 = document1.select(".DG").get(0).select(".DGAlternatingItemStyle");
-            //System.out.println(items1);
-            //System.out.println(items2);
-            for (int i = 0; i < items1.size(); i++) {
-                Elements tds = items1.get(i).getElementsByTag("td");
-                Lesson lesson = new Lesson();
-                lesson.no = tds.get(0).text();
-                lesson.name = tds.get(1).text().split("]", 2)[1];
-                lesson.credit = tds.get(2).text();
-                lesson.teacher = tds.get(3).text();
-                lesson.classroom = tds.get(4).text();
-                if (tds.get(5).text().contains(" ")) {
-                    lesson.during[0] = Integer.parseInt(tds.get(5).text().split(" -")[0]);
-                    lesson.during[1] = Integer.parseInt(tds.get(5).text().split(" -")[1]);
-                } else {
-                    lesson.during[0] = Integer.parseInt(tds.get(5).text().split("-")[0]);
-                    lesson.during[1] = Integer.parseInt(tds.get(5).text().split("-")[1]);
-                }
-                for (int j = 6; j < tds.size(); j++) {
-                    if (!tds.get(j).text().equals(""))
-                        lesson.time[j - 6] = tds.get(j).text();
-                    else lesson.time[j - 6] = "null";
-                }
-                lessons.add(lesson);
-            }
-            for (int i = 0; i < items2.size(); i++) {
-                Elements tds = items2.get(i).getElementsByTag("td");
-                Lesson lesson = new Lesson();
-                lesson.no = tds.get(0).text();
-                lesson.name = tds.get(1).text().split("]", 2)[1];
-                lesson.credit = tds.get(2).text();
-                lesson.teacher = tds.get(3).text();
-                lesson.classroom = tds.get(4).text();
-                if (tds.get(5).text().contains(" ")) {
-                    lesson.during[0] = Integer.parseInt(tds.get(5).text().split(" -")[0]);
-                    lesson.during[1] = Integer.parseInt(tds.get(5).text().split(" -")[1]);
-                } else {
-                    lesson.during[0] = Integer.parseInt(tds.get(5).text().split("-")[0]);
-                    lesson.during[1] = Integer.parseInt(tds.get(5).text().split("-")[1]);
-                }
-                for (int j = 6; j < tds.size(); j++) {
-                    if (!tds.get(j).text().equals(""))
-                        lesson.time[j - 6] = tds.get(j).text();
-                    else lesson.time[j - 6] = "null";
-                }
-                lessons.add(lesson);
-            }*/
+
             for (int j = 0; j < lessons.size(); j++) {
                 Lesson lesson = lessons.get(j);
                 System.out.println("课程名：" + lesson.name);

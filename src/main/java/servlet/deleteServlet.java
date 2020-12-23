@@ -29,3 +29,4 @@ public class deleteServlet extends HttpServlet {
         else response.getWriter().println("error");
     }
 }
+

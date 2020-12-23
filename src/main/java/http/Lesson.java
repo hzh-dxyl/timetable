@@ -10,3 +10,4 @@ public class Lesson {
     public String credit;  //学分
     public String note; //备注
 }
+
